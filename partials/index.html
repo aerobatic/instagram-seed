@@ -1,8 +1,18 @@
+
 <div>
-  <h1>List of Things</h1>
-  <ul>
-    <li ng-repeat="thing in things">
-      <a href="#" ng-click="loadThing(thing.id, $event)">{{thing.name}}</a>
-    </li>
-  </ul>
+  <link type="text/css" rel="Stylesheet" asset-url="css/normalize" />
+  <link type="text/css" rel="Stylesheet" asset-url="css/app" />
+
+  <section id="header">
+    <h3>Aerobatic Angular Seed</h3>
+  </section>
+
+  <div ng-controller="MyFeedCtrl">
+    <ng-include src="'myFeedTmpl'"></ng-include>
+  </div>
+
+  <div ng-controller="PopularCtrl">
+    <ng-include src="'popularTmpl'"></ng-include>
+  </div>
+  <section id="footer"></section>
 </div>
